@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poller+One&display=swap');
+
+@font-face{
+    font-family: DMSerif;
+    src: url("../src/assets/fonts/DMSerifDisplay-Regular.ttf");
+}
+
+@import "tailwindcss";
+
+@theme{
+    --font-DMSerif: DMSerif, "sans-serif";
+    --font-pollerone: Poller One, "sans-serif";
+}
