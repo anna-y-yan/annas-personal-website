@@ -6,6 +6,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
 import Service from './components/Service'
+import Projects from './components/Projects'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,6 +17,7 @@ function App() {
       <Hero />
       <About />
       <Service />
+      <Projects />
       <h1 className="font-pollerone text-[50px] text-rose-600 text-center">Hello World!</h1>
       <h1 className="font-DMSerif text-[50px] text-violet-400 hover:text-sky-600 text-center">My name is Anna and this is my website</h1>
     </div>
