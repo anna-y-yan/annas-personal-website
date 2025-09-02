@@ -15,10 +15,22 @@ const Hero = () => {
             Welcome to my personal website! I'm a passionate computer science student at the University of Chicago, eager to explore the world of technology and innovation.
         </p>
         <div className='mt-8 space-x-4'>
-            <button
-            className='bg-gradient-to-r from-rose-400 to-blue-500 text-white hidden md:inline transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full'>Contact Me</button>
-            <button
-            className='bg-gradient-to-r from-yellow-500 to-pink-500 text-white hidden md:inline transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full'>Resume</button>
+            <a href="#contact">
+                <button
+                className='bg-gradient-to-r from-rose-400 to-blue-500 text-white hidden 
+                md:inline transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full'
+                >
+                    Contact Me
+                </button>
+            </a>
+            <a href="">
+                <button
+                className='bg-gradient-to-r from-yellow-500 to-pink-500 text-white hidden 
+                md:inline transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full'
+                >
+                    Resume
+                </button>
+            </a>
         </div>
     </div>
   )
