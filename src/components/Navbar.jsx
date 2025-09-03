@@ -18,7 +18,7 @@ const Navbar = () => {
                 <a 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    href="https://www.linkedin.com/in/anna-yan-9237042a3/"
+                    href="https://www.linkedin.com/in/anna-y-yan/"
                 >
                     <button 
                         className='bg-gradient-to-r from-rose-400 to-blue-500 

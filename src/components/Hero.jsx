@@ -12,9 +12,9 @@ const Hero = () => {
             , Aspiring Software Engineer
         </h1>
         <p className='mt-4 text-lg text-gray-300'>
-            Welcome to my personal website! I'm a passionate computer science student at the University of Chicago, eager to explore the world of technology and innovation.
+            I'm a passionate computer science student at the University of Chicago, eager to explore the world of technology and innovation.
         </p>
-        <div className='mt-8 space-x-4'>
+        <div className='mt-8 space-x-10'>
             <a href="#contact">
                 <button
                 className='bg-gradient-to-r from-rose-400 to-blue-500 text-white hidden 
@@ -23,10 +23,10 @@ const Hero = () => {
                     Contact Me
                 </button>
             </a>
-            <a href="">
+            <a href="../../public/AnnaYan_Resume_Sep25.pdf" target="_blank" rel="noopener noreferrer">
                 <button
-                className='bg-gradient-to-r from-yellow-500 to-pink-500 text-white hidden 
-                md:inline transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full'
+                    className='bg-gradient-to-r from-yellow-500 to-pink-500 text-white hidden 
+                    md:inline transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full'
                 >
                     Resume
                 </button>

@@ -53,12 +53,9 @@ const Footer = () => {
                     </a>
                 </div>
                 <div className='flex space-x-4'>
-                    <a href="#" className='text-gray-400 hover:text-white'>
-                        Privacy
-                    </a>
-                    <a href="#" className='text-gray-400 hover:text-white'>
-                        Terms of Services
-                    </a>
+                    <p className='text-gray-400 italic'>
+                        This page was last updated September 2025.
+                    </p>
                 </div>
             </div>
         </div>
