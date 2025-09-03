@@ -48,7 +48,7 @@ const Contact = () => {
                         </div>
                         <button className='bg-gradient-to-r from-rose-400 to-blue-500 
                         text-white hidden md:inline transform transition-transform 
-                        duration-300 hover:scale-105 px-8 py-2 rounded-full'>Send</button>
+                        duration-300 hover:scale-120 px-8 py-2 rounded-full'>Send</button>
                     </form>
                 </div>
             </div>

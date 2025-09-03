@@ -16,6 +16,8 @@ const projects = [
         Blokus. Players can compete against each other or an AI opponent. \
         Features include a graphical interface using Pygame and a text-based \
         interface using the Curses library. \ Code for this project is available upon request.",
+        progress: "In Progress: Currently enhancing the AI opponent using \
+        minimax algorithm with alpha-beta pruning for improved decision-making."
     },
     {
         id: 2,
@@ -28,17 +30,31 @@ const projects = [
         provides real-time insights into rule performance and allows for easy \
         adjustments to improve detection accuracy. (Real dashboard includes \
         confidential company data and is not publicly available.)",
+        progress: "Completed: Successfully deployed the dashboard and integrated \
+        with ServiceNow, resulting in a 20% reduction in false positives."
     },
     {
         id: 3,
         name: "Alumni Network Web App",
         technologies: "React, Node.js, Express, MongoDB",
         image: workingsnoopy,
-        description: "A web application for connecting alumni and facilitating networking opportunities. Built with a MERN stack (MongoDB, Express, React, Node.js) and includes features like user profiles, messaging, and event management."
+        description: "A web application for connecting alumni and facilitating \
+        networking opportunities. Built with a MERN stack (MongoDB, Express, React, Node.js) \
+        and includes features like user profiles, messaging, and event management.",
+        progress: "Completed: Launched the app with over 100 active users and \
+        received positive feedback on the user interface and functionality."
     },
 ]
 
-function ReadMoreModal({ open, onClose, description, name, technologies, image }) {
+const toTechList = (technologies) => 
+    Array.isArray(technologies) 
+        ? technologies
+        : String(technologies)
+            .split(',')
+            .map(t => t.trim())
+            .filter(Boolean);
+
+function ReadMoreModal({ open, onClose, description, name, technologies, image, progress }) {
     useEffect(() => {
         if (!open) return;
         const onKey = (e) => e.key === 'Escape' && onClose();
@@ -57,20 +73,24 @@ function ReadMoreModal({ open, onClose, description, name, technologies, image }
 
     return createPortal(
         <div
-            className='fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-blur-sm'
+            className='fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-black/10'
             aria-hidden='false'
             role='dialog'
             aria-modal='true'
             onMouseDown={onClose} // outside click (see stopPropagation below)
         >
             <div
-                className='w-full max-w-xl rounded-2xl bg-gray-800 p-5 rounded-lg drop-shadow-lg'
+                className='w-full max-w-xl max-h-[85vh] rounded-2xl bg-gray-800 p-5 rounded-lg drop-shadow-lg
+                ring-1 ring-white/10 overflow-hidden flex flex-col'
                 role='document'
                 onMouseDown={(e) => e.stopPropagation()} // prevent outside click
             >
-                <div className='flex items-start justify-between p-4'>
-                    <h3 className='mt-2 text-2xl font-bold text-transparent 
-                        bg-clip-text bg-gradient-to-r from-rose-400 to-blue-500'>
+                <div className='flex items-start justify-between p-2'>
+                    <h3
+                        id='project-title'
+                        className='mt-2 text-2xl font-bold text-transparent 
+                        bg-clip-text bg-gradient-to-r from-rose-400 to-blue-500'
+                    >
                         {name}
                     </h3>
                     <div
@@ -81,16 +101,34 @@ function ReadMoreModal({ open, onClose, description, name, technologies, image }
                         x
                     </div>
                 </div>
-                <img src={image} alt={name} className="rounded-lg mb-4 w-full h-80 object-cover" />
-                <div className='px-4 pb-4'>
-                    <p className='text-white mb-4'>
-                        {description}
-                    </p>
-                </div>
-                <div className='px-4 pb-4'>
-                    <p className='text-gray-400 italic mb-4'>
-                        Technologies: {technologies}
-                    </p>
+
+                {/* scrollable content area */}
+                <div className='flex-1 overflow-y-auto px-4 pt-4 mb-5'>
+                    <img 
+                    src={image}
+                    alt={name}
+                    className="rounded-lg mb-4 w-full h-80 object-cover" 
+                    />
+                    <p className='text-white mb-4'>{description}</p>
+                    <div className="mt-2">
+                        <h4 className="text-gray-300 text-sm mb-2">Technologies</h4>
+                        <div className="flex flex-wrap gap-2">
+                            {toTechList(technologies).map((tech, i) => (
+                            <span
+                                key={i}
+                                className="inline-flex items-center rounded-full
+                                        bg-blue-500/50 text-white text-xs px-3 py-1
+                                        ring-1 ring-rose-900/20 mb-3"
+                            >
+                                {tech}
+                            </span>
+                            ))}
+                        </div>
+                    </div>
+                    <div>
+                        <p className='text-gray-400 italic mb-2'>{progress}</p>
+                    </div>
+
                 </div>
             </div>
         </div>,
@@ -108,7 +146,7 @@ const Projects = () => {
                     {projects.map(project => (
                     <div key={project.id} className='bg-gray-800 p-6 rounded-lg 
                     hover:shadow-lg transform transition-transform duration-300 
-                    hover:scale-105'>
+                    hover:scale-120'>
                         <img src={project.image} alt={project.name} className="rounded-lg mb-4 w-full h-48 object-cover" />
                         <h3 className='text-2xl font-bold mb-2'>{project.name}</h3>
                         <p className='text-gray-400 mb-4'>{project.technologies}</p>
@@ -129,6 +167,7 @@ const Projects = () => {
                 name={selectedProject ? selectedProject.name : ''}
                 technologies={selectedProject ? selectedProject.technologies : ''}
                 image={selectedProject ? selectedProject.image : ''}
+                progress={selectedProject ? selectedProject.progress : ''}
             />
         </div>
     </div>

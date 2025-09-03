@@ -23,7 +23,7 @@ const Navbar = () => {
                     <button 
                         className='bg-gradient-to-r from-rose-400 to-blue-500 
                             text-white hidden md:inline-flex transform transition-transform 
-                            duration-300 hover:scale-105 px-4 py-2 rounded-full items-center space-x-2'
+                            duration-300 hover:scale-120 px-4 py-2 rounded-full items-center space-x-2'
                     >
                         <FaLinkedin className="inline-block text-xl"/>
                         <span>

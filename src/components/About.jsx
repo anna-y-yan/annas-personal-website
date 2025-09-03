@@ -23,7 +23,7 @@ const About = () => {
                             <label htmlFor="htmlandcss" className='w-2/12'>HTML & CSS</label>
                             <div className="grow bg-gray-800 rounded-full h-2.5">
                                 <div className='bg-gradient-to-r from-rose-400 to-blue-500 h-2.5 
-                                    rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12'>
+                                    rounded-full transform transition-transform duration-300 hover:scale-120 w-10/12'>
                                 </div>
                             </div>
                         </div>
@@ -31,7 +31,7 @@ const About = () => {
                             <label htmlFor="reactjs" className='w-2/12'>React JS</label>
                             <div className="grow bg-gray-800 rounded-full h-2.5">
                                 <div className='bg-gradient-to-r from-rose-400 to-blue-500 h-2.5 
-                                    rounded-full transform transition-transform duration-300 hover:scale-105 w-11/12'>
+                                    rounded-full transform transition-transform duration-300 hover:scale-120 w-11/12'>
                                 </div>
                             </div>
                         </div>
@@ -39,7 +39,7 @@ const About = () => {
                             <label htmlFor="nodejs" className='w-2/12'>Node JS</label>
                             <div className="grow bg-gray-800 rounded-full h-2.5">
                                 <div className='bg-gradient-to-r from-rose-400 to-blue-500 h-2.5 
-                                    rounded-full transform transition-transform duration-300 hover:scale-105 w-9/12'>
+                                    rounded-full transform transition-transform duration-300 hover:scale-120 w-9/12'>
                                 </div>
                             </div>
                         </div>
