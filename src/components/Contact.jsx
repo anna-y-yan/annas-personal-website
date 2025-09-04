@@ -47,7 +47,7 @@ export default function ContactForm() {
                 <div className='flex flex-col md:flex-row items-center md:space-x-12'>
                     <div className='flex-1'>
                         <h3 className='text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-blue-500 mb-4'>Let's Talk</h3>
-                        <p>I am open to discussing new opportunities, collaborations, or simply connecting with like-minded individuals. Feel free to reach out to me through any of the following methods:</p>
+                        <p>I am open to discussing new opportunities, collaborations, or simply chatting about common interests! Feel free to reach out to me through any of the following methods:</p>
                         <div className='mb-4 mt-8'>
                             <FaEnvelope className='inline-block text-rose-400 mr-2'></FaEnvelope>
                             <a href="mailto:annayan@uchicago.edu" className='hover:underline'> 
