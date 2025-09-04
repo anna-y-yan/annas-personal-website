@@ -24,7 +24,7 @@ const Hero = () => {
                         Contact Me
                     </button>
                 </a>
-                <a href="../../public/AnnaYan_Resume_Sep25.pdf" target="_blank" rel="noopener noreferrer">
+                <a href="/public/AnnaYan_Resume_Sep25.pdf" target="_blank" rel="noopener noreferrer">
                     <button
                         className='bg-gradient-to-r from-yellow-500 to-pink-500 text-white hidden 
                         md:inline transform transition-transform duration-300 hover:scale-120 px-4 py-2 rounded-full'
