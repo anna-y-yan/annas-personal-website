@@ -4,7 +4,7 @@ import HeroImage from '../assets/hero-image.png'
 const Hero = () => {
   return (
     <section id="hero" className='scroll-mt-5 md:scroll-mt-10'>
-        <div className='bg-black text-white text-center py-20'>
+        <div className='bg-black text-white text-center py-25'>
             <img src={HeroImage} alt='profile picture' 
             className= 'mx-auto mb-8 w-48 h-48 rounded-full object-cover transform transition-transform duration-300 hover:scale-110'/>
             <h1 className='text-4xl font-bold'>

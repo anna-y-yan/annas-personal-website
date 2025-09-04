@@ -17,7 +17,7 @@ const About = () => {
                             into coding began in high school, where I discovered my love for problem-solving 
                             and creating digital solutions. Since then, I have honed my skills in 
                             various programming languages and frameworks, including Python, Java, and React. Outside
-                            of academics, I am a competitive hip hop dancer, an avid coffee and matcha drinker, and 
+                            of tech, I am a competitive hip hop dancer, an avid coffee and matcha drinker, and 
                             I enjoy hiking and traveling!
                         </p>
                         {/* Skills progress bars */}

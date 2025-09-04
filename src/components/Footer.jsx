@@ -7,14 +7,14 @@ const Footer = () => {
         <div className='container mx-auto px-8 md:px-16 lg:px-24'>
             <div className='flex flex-col md:flex-row md:space-x-12 items-center mb-4'>
                 <div className='flex-1 mb-4 md:mb-0'>
-                    <h3 className='text-2xl font-bold mb-2'>Anna</h3>
-                    <p className='text-gray-400'>
+                    <h3 className='text-2xl font-bold mb-2'>Anna Yan</h3>
+                </div>
+                <div className='flex-1 w-full'>
+                    <p className='text-gray-400 text-center md:text-center lg:text-right'>
                         Computer Science Student | University of Chicago<br/>
                         Passionate about coding, problem-solving, and innovation.<br/>
                     </p>
-                </div>
-                <div className='flex-1 w-full'>
-                    <form className='flex items-center justify-center'>
+                    {/* <form className='flex items-center justify-center'>
                         <input 
                             type='email' 
                             placeholder='Enter your email'
@@ -27,7 +27,7 @@ const Footer = () => {
                         >
                             Subscribe
                         </button>
-                    </form>
+                    </form> */}
                 </div>
             </div>
 
@@ -38,7 +38,7 @@ const Footer = () => {
                 <p className='text-gray-400'>
                     &copy; {new Date().getFullYear()} Anna Yan. All rights reserved.
                 </p>
-                <div className='flex space-x-4 my-4 md:my-0'>
+                <div className='flex space-x-4 my-4 md:my-0 text-xl'>
                     <a 
                         target="_blank" 
                         rel="noopener noreferrer" 
