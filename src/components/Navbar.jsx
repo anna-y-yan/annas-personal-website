@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import IconImage from '../assets/icon.png'
+import IconImage from '../assets/maroonlogo.png'
 import { FaLinkedin } from 'react-icons/fa'
 
 
@@ -15,14 +15,14 @@ export default function Navbar() {
     return (
     <nav className={['fixed inset-x-0 top-0 z-50 bg-black text-white px-8 md:px-16 lg:px-24',
         scrolled
-            ? 'bg-seaglass/50 backdrop-blur border-b border-white/10 shadow-sm'
+            ? 'bg-forestgreen/50 backdrop-blur border-b border-white/10 shadow-sm'
             : 'bg-transparent'
         ].join(' ')}
     >
             <div className='mx-auto max-w-7xl px-6 h-16 container py-2 flex 
             justify-center md:justify-between items-center'>
                 <a href='#hero' className='hover:scale-110 transform transition-transform duration-300'>
-                    <img src={IconImage} alt='logo' className='w-15 h-13 rounded-full object-cover hidden md:inline'/>
+                    <img src={IconImage} alt='logo' className='w-17 h-12 rounded-full object-cover hidden md:inline'/>
                 </a>
                 <div className='space-x-6'>
                     <a href="#hero" className='text-lightblue hover:text-maroon'>Home</a>
