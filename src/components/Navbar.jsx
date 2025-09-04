@@ -19,10 +19,13 @@ export default function Navbar() {
             : 'bg-transparent'
         ].join(' ')}
     >
-            <div className='mx-auto max-w-7xl px-6 h-16 container py-2 flex justify-center md:justify-between items-center'>
-                <img src={IconImage} alt='logo' className='w-15 h-13 rounded-full object-cover hidden md:inline'/>
+            <div className='mx-auto max-w-7xl px-6 h-16 container py-2 flex 
+            justify-center md:justify-between items-center'>
+                <a href='#hero' className='hover:scale-110 transform transition-transform duration-300'>
+                    <img src={IconImage} alt='logo' className='w-15 h-13 rounded-full object-cover hidden md:inline'/>
+                </a>
                 <div className='space-x-6'>
-                    <a href="#home" className='hover:text-gray-400'>Home</a>
+                    <a href="#hero" className='hover:text-gray-400'>Home</a>
                     <a href="#about" className='hover:text-gray-400'>About Me</a>
                     <a href="#services" className='hover:text-gray-400'>Services</a>
                     <a href="#projects" className='hover:text-gray-400'>Projects</a>
@@ -36,7 +39,7 @@ export default function Navbar() {
                     <button 
                         className='bg-gradient-to-r from-rose-400 to-blue-500 
                             text-white hidden md:inline-flex transform transition-transform 
-                            duration-300 hover:scale-120 px-4 py-2 rounded-full items-center space-x-2'
+                            duration-300 hover:scale-110 px-4 py-2 rounded-full items-center space-x-2'
                     >
                         <FaLinkedin className="inline-block text-xl"/>
                         <span>
