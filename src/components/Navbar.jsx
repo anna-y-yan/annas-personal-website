@@ -15,7 +15,7 @@ export default function Navbar() {
     return (
     <nav className={['fixed inset-x-0 top-0 z-50 bg-black text-white px-8 md:px-16 lg:px-24',
         scrolled
-            ? 'bg-black/50 backdrop-blur border-b border-white/10 shadow-sm'
+            ? 'bg-seaglass/50 backdrop-blur border-b border-white/10 shadow-sm'
             : 'bg-transparent'
         ].join(' ')}
     >
@@ -25,11 +25,11 @@ export default function Navbar() {
                     <img src={IconImage} alt='logo' className='w-15 h-13 rounded-full object-cover hidden md:inline'/>
                 </a>
                 <div className='space-x-6'>
-                    <a href="#hero" className='hover:text-gray-400'>Home</a>
-                    <a href="#about" className='hover:text-gray-400'>About Me</a>
-                    {/* <a href="#services" className='hover:text-gray-400'>Services</a> */}
-                    <a href="#projects" className='hover:text-gray-400'>Projects</a>
-                    <a href="#contact" className='hover:text-gray-400'>Contact</a>
+                    <a href="#hero" className='text-lightblue hover:text-maroon'>Home</a>
+                    <a href="#about" className='text-lightblue hover:text-maroon'>About Me</a>
+                    {/* <a href="#services" className='text-lightblue hover:text-maroon'>Services</a> */}
+                    <a href="#projects" className='text-lightblue hover:text-maroon'>Projects</a>
+                    <a href="#contact" className='text-lightblue hover:text-maroon'>Contact</a>
                 </div>
                 <a 
                     target="_blank" 
@@ -37,8 +37,8 @@ export default function Navbar() {
                     href="https://www.linkedin.com/in/anna-y-yan/"
                 >
                     <button 
-                        className='bg-gradient-to-r from-rose-400 to-blue-500 
-                            text-white hidden md:inline-flex transform transition-transform 
+                        className='bg-gradient-to-r from-seaglass to-almond text-forestgreen 
+                            hover:text-maroon hidden md:inline-flex transform transition-transform 
                             duration-300 hover:scale-110 px-4 py-2 rounded-full items-center space-x-2'
                     >
                         <FaLinkedin className="inline-block text-xl"/>

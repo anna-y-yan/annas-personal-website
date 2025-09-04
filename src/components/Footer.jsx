@@ -3,14 +3,14 @@ import { FaFacebook, FaGithub, FaLinkedin, FaMedium } from 'react-icons/fa'
 
 const Footer = () => {
   return (
-    <footer className='bg-black text-white py-5'>
+    <footer className='bg-sage text-maroon py-5'>
         <div className='container mx-auto px-8 md:px-16 lg:px-24'>
             <div className='flex flex-col md:flex-row md:space-x-12 items-center mb-4'>
                 <div className='flex-1 mb-4 md:mb-0'>
-                    <h3 className='text-2xl font-bold mb-2'>Anna Yan</h3>
+                    <h3 className='text-3xl font-bold mb-2 font-DMSerif'>Anna Yan</h3>
                 </div>
                 <div className='flex-1 w-full'>
-                    <p className='text-gray-400 text-center md:text-center lg:text-right'>
+                    <p className='text-matcha text-center md:text-center lg:text-right'>
                         Computer Science Student | University of Chicago<br/>
                         Passionate about coding, problem-solving, and innovation.<br/>
                     </p>
@@ -32,10 +32,10 @@ const Footer = () => {
             </div>
 
             <div
-                className='border-t border-gray-600 pt-4 flex flex-col md:flex-row
+                className='border-t border-matcha pt-4 flex flex-col md:flex-row
                 justify-between items-center'
             >
-                <p className='text-gray-400'>
+                <p className='text-forestgreen'>
                     &copy; {new Date().getFullYear()} Anna Yan. All rights reserved.
                 </p>
                 <div className='flex space-x-4 my-4 md:my-0 text-xl'>
@@ -43,7 +43,7 @@ const Footer = () => {
                         target="_blank" 
                         rel="noopener noreferrer" 
                         href="https://www.linkedin.com/in/anna-y-yan/" 
-                        className='text-gray-400 hover:text-white'
+                        className='text-matcha hover:text-maroon'
                     >
                         <FaLinkedin />
                     </a>
@@ -51,13 +51,13 @@ const Footer = () => {
                         target="_blank" 
                         rel="noopener noreferrer" 
                         href="https://github.com/anna-y-yan" 
-                        className='text-gray-400 hover:text-white'
+                        className='text-matcha hover:text-maroon'
                     >
                         <FaGithub />
                     </a>
                 </div>
                 <div className='flex space-x-4'>
-                    <p className='text-gray-400 italic'>
+                    <p className='text-matcha italic'>
                         This page was last updated September 2025.
                     </p>
                 </div>

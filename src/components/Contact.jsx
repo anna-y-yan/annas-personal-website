@@ -41,26 +41,26 @@ export default function ContactForm() {
 
   return (
         <section id="contact" className='scroll-mt-5 md:scroll-mt-5'>
-        <div className='bg-black text-white py-20'>
+        <div className='bg-forestgreen text-lightblue py-20'>
             <div className='container mx-auto px-8 md:px-16 lg:px-24'>
-                <h2 className='text-4xl font-bold text-center mb-12'>Contact Me</h2>
+                <h2 className='text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-sage to-seaglass'>Contact Me</h2>
                 <div className='flex flex-col md:flex-row items-center md:space-x-12'>
                     <div className='flex-1'>
-                        <h3 className='text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-blue-500 mb-4'>Let's Talk</h3>
+                        <h3 className='text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sage to-seaglass mb-4'>Let's Talk</h3>
                         <p>I am open to discussing new opportunities, collaborations, or simply chatting about common interests! Feel free to reach out to me through any of the following methods:</p>
                         <div className='mb-4 mt-8'>
-                            <FaEnvelope className='inline-block text-rose-400 mr-2'></FaEnvelope>
-                            <a href="mailto:annayan@uchicago.edu" className='hover:underline'> 
+                            <FaEnvelope className='inline-block text-maroon mr-2'></FaEnvelope>
+                            <a href="mailto:annayan@uchicago.edu" className='hover:underline text-almond'> 
                                 annayan@uchicago.edu
                             </a>
                         </div>
                         <div className='mb-4'>
-                            <FaPhone className='inline-block text-rose-400 mr-2'></FaPhone>
-                            <span>+16306088237</span>
+                            <FaPhone className='inline-block text-maroon mr-2'></FaPhone>
+                            <span className='text-almond'>+16306088237</span>
                         </div>
                         <div className='mb-4'>
-                            <FaMapMarkedAlt className='inline-block text-rose-400 mr-2'></FaMapMarkedAlt>
-                            <span>Chicago, IL</span>
+                            <FaMapMarkedAlt className='inline-block text-maroon mr-2'></FaMapMarkedAlt>
+                            <span className='text-almond'>Chicago, IL</span>
                         </div>
                     </div>
                     <div className='flex-1 w-full'>
@@ -78,7 +78,7 @@ export default function ContactForm() {
                                 name="name"
                                 type="text"
                                 required
-                                className="w-full p-2 rounded bg-gray-800 border border-gray-600 focus:outline-none focus:border-rose-400"
+                                className="text-chocolate w-full p-2 rounded bg-almond border border-gray-300 focus:outline-none focus:border-maroon"
                                 placeholder="Enter your name"
                                 />
                             </div>
@@ -90,7 +90,7 @@ export default function ContactForm() {
                                 name="email"
                                 type="email"
                                 required
-                                className="w-full p-2 rounded bg-gray-800 border border-gray-600 focus:outline-none focus:border-rose-400"
+                                className="text-chocolate w-full p-2 rounded bg-almond border border-gray-300 focus:outline-none focus:border-maroon"
                                 placeholder="Enter your email"
                                 />
                             </div>
@@ -102,25 +102,24 @@ export default function ContactForm() {
                                 name="message"
                                 rows="5"
                                 required
-                                className="w-full p-2 rounded bg-gray-800 border border-gray-600 focus:outline-none focus:border-rose-400"
+                                className="text-chocolate w-full p-2 rounded bg-almond border border-gray-300 focus:outline-none focus:border-maroon"
                                 placeholder="Enter your message"
                                 />
                             </div>
 
                             <button
-                                type="submit"
                                 disabled={status === "sending"}
-                                className="bg-gradient-to-r from-rose-400 to-blue-500 text-white transform transition-transform 
-                                        duration-300 hover:scale-110 px-8 py-2 rounded-full"
+                                className="bg-gradient-to-r from-sage to-seaglass text-forestgreen transform transition-transform 
+                                        duration-300 hover:scale-110 px-8 py-2 rounded-full hover:text-maroon"
                             >
                                 {status === "sending" ? "Sending..." : "Send"}
                             </button>
 
                             {status === "sent" && (
-                                <p className="text-green-200">Thanks! Your message has been sent.</p>
+                                <p className="text-sage">Thanks! Your message has been sent.</p>
                             )}
                             {status === "error" && (
-                                <p className="text-rose-400">Error: {error}</p>
+                                <p className="text-maroon">Error: {error}</p>
                             )}
                         </form>
                     </div>
