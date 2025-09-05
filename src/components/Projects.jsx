@@ -131,7 +131,7 @@ function ReadMoreModal({ open, onClose, description, name, technologies, image, 
                     </h3>
                     <div
                         onClick={onClose}
-                        className='text-matcha hover:text-maroon cursor-pointer'
+                        className='text-matcha hover:text-maroon cursor-pointer text-xl font-bold'
                         aria-label='Close'
                     >
                         x

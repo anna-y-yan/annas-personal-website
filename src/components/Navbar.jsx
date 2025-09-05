@@ -2,20 +2,22 @@ import React, { useEffect, useState } from 'react'
 import IconImage from '../assets/maroonlogo.png'
 import { FaLinkedin } from 'react-icons/fa'
 import { FiMenu, FiX } from 'react-icons/fi'
-import { SiNewjapanprowrestling } from 'react-icons/si';
-
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const [open, setOpen] = useState(false);
 
     useEffect(() => {
-        const onScroll = () => setScrolled(window.scrollY > 4);
+        const onScroll = () => {
+            setScrolled(window.scrollY > 4);
+            setOpen(false);
+        };
         window.addEventListener("scroll", onScroll);
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
 
     return (
+    <>
     <nav className={['fixed inset-x-0 top-0 z-50 bg-black text-white px-8 md:px-16 lg:px-24',
         scrolled
             ? 'bg-forestgreen/50 backdrop-blur border-b border-white/10 shadow-sm'
@@ -57,6 +59,7 @@ export default function Navbar() {
                         </span>
                     </button>
                 </a>
+                
                 {/* hamburger menu mobile only */}
                 <button
                     className='md:hidden ml-auto p-2 rounded-lg border border-white/20'
@@ -67,28 +70,30 @@ export default function Navbar() {
                 >
                     <FiMenu className='text-2xl'/>
                 </button>
-            </div>
-            {/* mobile overlay and right slideout menu */}
-            {/* overlay */}
-            <div
-                className={`md:hidden fixed inset-0 bg-black/40 transition-opacity ${
-                    open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-                }`}
-                onClick={() => setOpen(false)}
-            />
-            {/* slide-out panel */}
-            <aside
-                id='mobile-menu'
-                className={`md:hidden fixed top-0 right-0 h-full w-72 bg-forestgreen/50 backdrop-blur-sm
-                    border-l border-white/10 transform transition-transform duration-300 
-                    ${open ? 'translate-x-0' : 'translate-x-full'}`}
+        </div>
+    </nav>
+        
+    {/* mobile overlay and right slideout menu */}
+    {/* overlay */}
+    <div
+        className={`md:hidden fixed inset-0 bg-black/40 transition-opacity z-[60] ${
+            open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
+        onClick={() => setOpen(false)}
+       />
+        {/* slide-out panel */}
+        <aside
+            id='mobile-menu'
+            className={`md:hidden fixed top-0 right-0 h-full w-72 bg-forestgreen/50 backdrop-blur-sm
+                border-l border-white/10 transform transition-transform duration-300 
+                z-[70] ${open ? 'translate-x-0' : 'translate-x-full'}`}
             role='dialog'
             aria-modal='true'
-            >
+        >
                 <div className='flex items-center justify-between h-16 px-5'>
-                    <span className='text-lg font-semibold'>Menu</span>
+                    <span className='text-lg font-bold text-sage'>Menu</span>
                     <button
-                        className='p-2 rounded-lg border border-white/20'
+                        className='p-2 rounded-lg border border-white/20 text-lightblue hover:text-maroon'
                         aria-label='Close menu'
                         onClick={() => setOpen(false)}
                     >
@@ -126,8 +131,8 @@ export default function Navbar() {
                     </a>
                 </nav>
             </aside>
-        </nav>
-  );
+        </>
+    );
 }
 
 // const Navbar = () => {
