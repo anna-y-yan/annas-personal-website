@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import IconImage from '../assets/maroonlogo.png'
 import { FaLinkedin } from 'react-icons/fa'
+import { FiMenu, FiX } from 'react-icons/fi'
+import { SiNewjapanprowrestling } from 'react-icons/si';
 
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
+    const [open, setOpen] = useState(false);
 
     useEffect(() => {
         const onScroll = () => setScrolled(window.scrollY > 4);
@@ -19,19 +22,26 @@ export default function Navbar() {
             : 'bg-transparent'
         ].join(' ')}
     >
-            <div className='mx-auto max-w-7xl px-6 h-16 container py-2 flex 
+        {/* logo hidden on mobile */}
+        <div className='mx-auto max-w-7xl px-6 h-16 container py-2 flex 
             justify-center md:justify-between items-center'>
                 <a href='#hero' className='hover:scale-110 transform transition-transform duration-300'>
-                    <img src={IconImage} alt='logo' className='w-17 h-12 rounded-full object-cover hidden md:inline'/>
+                    <img 
+                        src={IconImage} 
+                        alt='logo' 
+                        className='w-17 h-12 rounded-full object-cover md:inline'
+                    />
                 </a>
-                <div className='space-x-6'>
+                {/* center links on desktop only */}
+                <div className='hidden md:flex space-x-6'>
                     <a href="#hero" className='text-lightblue hover:text-maroon'>Home</a>
                     <a href="#about" className='text-lightblue hover:text-maroon'>About Me</a>
                     {/* <a href="#services" className='text-lightblue hover:text-maroon'>Services</a> */}
                     <a href="#projects" className='text-lightblue hover:text-maroon'>Projects</a>
                     <a href="#contact" className='text-lightblue hover:text-maroon'>Contact</a>
                 </div>
-                <a 
+                {/* linkedin button on desktop only */}
+                <a
                     target="_blank" 
                     rel="noopener noreferrer" 
                     href="https://www.linkedin.com/in/anna-y-yan/"
@@ -47,7 +57,75 @@ export default function Navbar() {
                         </span>
                     </button>
                 </a>
+                {/* hamburger menu mobile only */}
+                <button
+                    className='md:hidden ml-auto p-2 rounded-lg border border-white/20'
+                    aria-label='Open menu'
+                    aria-expanded={open}
+                    aria-controls='mobile-menu'
+                    onClick={() => setOpen(!open)}
+                >
+                    <FiMenu className='text-2xl'/>
+                </button>
             </div>
+            {/* mobile overlay and right slideout menu */}
+            {/* overlay */}
+            <div
+                className={`md:hidden fixed inset-0 bg-black/40 transition-opacity ${
+                    open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+                }`}
+                onClick={() => setOpen(false)}
+            />
+            {/* slide-out panel */}
+            <aside
+                id='mobile-menu'
+                className={`md:hidden fixed top-0 right-0 h-full w-72 bg-forestgreen/50 backdrop-blur-sm
+                    border-l border-white/10 transform transition-transform duration-300 
+                    ${open ? 'translate-x-0' : 'translate-x-full'}`}
+            role='dialog'
+            aria-modal='true'
+            >
+                <div className='flex items-center justify-between h-16 px-5'>
+                    <span className='text-lg font-semibold'>Menu</span>
+                    <button
+                        className='p-2 rounded-lg border border-white/20'
+                        aria-label='Close menu'
+                        onClick={() => setOpen(false)}
+                    >
+                        <FiX className='text-2xl' />
+                    </button>
+                </div>
+                <nav className="px-5 py-4 space-y-4">
+                    <a href="#hero" onClick={() => setOpen(false)} className="block text-lightblue hover:text-maroon">
+                        Home
+                    </a>
+                    <a href="#about" onClick={() => setOpen(false)} className="block text-lightblue hover:text-maroon">
+                        About Me
+                    </a>
+                    <a href="#projects" onClick={() => setOpen(false)} className="block text-lightblue hover:text-maroon">
+                        Projects
+                    </a>
+                    <a href="#contact" onClick={() => setOpen(false)} className="block text-lightblue hover:text-maroon">
+                        Contact
+                    </a>
+
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.linkedin.com/in/example/"
+                        className="block pt-2"
+                        onClick={() => setOpen(false)}
+                    >
+                        <span
+                        className="inline-flex items-center gap-2 bg-gradient-to-r from-seaglass to-almond 
+                                    text-forestgreen hover:text-maroon px-4 py-2 rounded-full"
+                        >
+                        <FaLinkedin className="text-xl" />
+                        Connect with Me
+                        </span>
+                    </a>
+                </nav>
+            </aside>
         </nav>
   );
 }
