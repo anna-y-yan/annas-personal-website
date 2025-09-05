@@ -3,7 +3,7 @@ import { FaFacebook, FaGithub, FaLinkedin, FaMedium } from 'react-icons/fa'
 
 const Footer = () => {
   return (
-    <footer className='bg-sage text-maroon py-5'>
+    <footer className='bg-almond text-maroon py-5'>
         <div className='container mx-auto px-8 md:px-16 lg:px-24'>
             <div className='flex flex-col md:flex-row md:space-x-12 items-center mb-4'>
                 <div className='flex-1 mb-4 md:mb-0'>
@@ -32,10 +32,10 @@ const Footer = () => {
             </div>
 
             <div
-                className='border-t border-matcha pt-4 flex flex-col md:flex-row
+                className='border-t border-matcha pt-4 flex flex-col md:flex-row md:space-x-12
                 justify-between items-center'
             >
-                <p className='text-forestgreen'>
+                <p className='text-matcha'>
                     &copy; {new Date().getFullYear()} Anna Yan. All rights reserved.
                 </p>
                 <div className='flex space-x-4 my-4 md:my-0 text-xl'>

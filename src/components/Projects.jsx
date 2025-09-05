@@ -117,7 +117,7 @@ function ReadMoreModal({ open, onClose, description, name, technologies, image, 
             onMouseDown={onClose} // outside click (see stopPropagation below)
         >
             <div
-                className='w-full max-w-xl max-h-[85vh] rounded-2xl bg-almond p-5 rounded-lg drop-shadow-lg
+                className='w-full max-w-xl max-h-[85vh] rounded-2xl bg-lightblue p-5 rounded-lg drop-shadow-lg
                 ring-1 ring-white/10 overflow-hidden flex flex-col'
                 role='document'
                 onMouseDown={(e) => e.stopPropagation()} // prevent outside click
@@ -148,7 +148,7 @@ function ReadMoreModal({ open, onClose, description, name, technologies, image, 
                             <span
                                 key={i}
                                 className="inline-flex items-center rounded-full
-                                        bg-chocolate/80 text-seaglass text-sm px-3 py-1 mb-3"
+                                        bg-forestgreen/75 text-almond text-sm px-3 py-2 mb-2"
                             >
                                 {tech}
                             </span>
@@ -177,10 +177,14 @@ const Projects = () => {
         <section id="projects" className='scroll-mt-5 md:scroll-mt-5'>
             <div className='bg-forestgreen text-lightblue py-20'>
                 <div className='container mx-auto px-8 md:px-16 lg:px-24'>
-                    <h2 className='text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-sage to-seaglass'>My Projects</h2>
+                    <h2 className='text-4xl font-bold text-center mb-12 
+                    text-almond'
+                    >
+                        My Projects
+                    </h2>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
                         {projects.map(project => (
-                        <div key={project.id} className='bg-almond p-6 rounded-lg 
+                        <div key={project.id} className='bg-lightblue p-6 rounded-lg 
                         hover:shadow-lg transform transition-transform duration-300 
                         hover:scale-105'>
                             <img src={project.image} alt={project.name} className="rounded-lg mb-4 w-full h-48 object-cover" />

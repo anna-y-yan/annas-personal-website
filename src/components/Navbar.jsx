@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import IconImage from '../assets/maroonlogo.png'
+import IconImage from '../assets/icon.png'
 import { FaLinkedin } from 'react-icons/fa'
 import { FiMenu, FiX } from 'react-icons/fi'
 
@@ -27,20 +27,21 @@ export default function Navbar() {
         {/* logo hidden on mobile */}
         <div className='mx-auto max-w-7xl px-6 h-16 container py-2 flex 
             justify-center md:justify-between items-center'>
-                <a href='#hero' className='hover:scale-110 transform transition-transform duration-300'>
-                    <img 
+                <a href='#hero' className='hover:scale-110 transform transition-transform duration-300 text-3xl text-almond font-DMSerif font-bold inline'>
+                    Anna
+                    {/* <img 
                         src={IconImage} 
                         alt='logo' 
-                        className='w-17 h-12 rounded-full object-cover md:inline'
-                    />
+                        className='w-15 h-13 rounded-full object-cover md:inline'
+                    /> */}
                 </a>
                 {/* center links on desktop only */}
                 <div className='hidden md:flex space-x-6'>
-                    <a href="#hero" className='text-lightblue hover:text-maroon'>Home</a>
-                    <a href="#about" className='text-lightblue hover:text-maroon'>About Me</a>
-                    {/* <a href="#services" className='text-lightblue hover:text-maroon'>Services</a> */}
-                    <a href="#projects" className='text-lightblue hover:text-maroon'>Projects</a>
-                    <a href="#contact" className='text-lightblue hover:text-maroon'>Contact</a>
+                    <a href="#hero" className='text-lightblue hover:text-salmon'>Home</a>
+                    <a href="#about" className='text-lightblue hover:text-salmon'>About Me</a>
+                    {/* <a href="#services" className='text-lightblue hover:text-salmon'>Services</a> */}
+                    <a href="#projects" className='text-lightblue hover:text-salmon'>Projects</a>
+                    <a href="#contact" className='text-lightblue hover:text-salmon'>Contact</a>
                 </div>
                 {/* linkedin button on desktop only */}
                 <a
@@ -50,7 +51,7 @@ export default function Navbar() {
                 >
                     <button 
                         className='bg-gradient-to-r from-seaglass to-almond text-forestgreen 
-                            hover:text-maroon hidden md:inline-flex transform transition-transform 
+                            hover:text-salmon hidden md:inline-flex transform transition-transform 
                             duration-300 hover:scale-110 px-4 py-2 rounded-full items-center space-x-2'
                     >
                         <FaLinkedin className="inline-block text-xl"/>
@@ -62,7 +63,7 @@ export default function Navbar() {
                 
                 {/* hamburger menu mobile only */}
                 <button
-                    className='md:hidden ml-auto p-2 rounded-lg border border-white/20'
+                    className='md:hidden ml-auto p-2 rounded-lg border border-lightblue text-lightblue hover:text-salmon'
                     aria-label='Open menu'
                     aria-expanded={open}
                     aria-controls='mobile-menu'
@@ -93,7 +94,7 @@ export default function Navbar() {
                 <div className='flex items-center justify-between h-16 px-5'>
                     <span className='text-lg font-bold text-sage'>Menu</span>
                     <button
-                        className='p-2 rounded-lg border border-white/20 text-lightblue hover:text-maroon'
+                        className='p-2 rounded-lg border border-white/20 text-lightblue hover:text-salmon'
                         aria-label='Close menu'
                         onClick={() => setOpen(false)}
                     >
@@ -101,16 +102,16 @@ export default function Navbar() {
                     </button>
                 </div>
                 <nav className="px-5 py-4 space-y-4">
-                    <a href="#hero" onClick={() => setOpen(false)} className="block text-lightblue hover:text-maroon">
+                    <a href="#hero" onClick={() => setOpen(false)} className="block text-lightblue hover:text-salmon">
                         Home
                     </a>
-                    <a href="#about" onClick={() => setOpen(false)} className="block text-lightblue hover:text-maroon">
+                    <a href="#about" onClick={() => setOpen(false)} className="block text-lightblue hover:text-salmon">
                         About Me
                     </a>
-                    <a href="#projects" onClick={() => setOpen(false)} className="block text-lightblue hover:text-maroon">
+                    <a href="#projects" onClick={() => setOpen(false)} className="block text-lightblue hover:text-salmon">
                         Projects
                     </a>
-                    <a href="#contact" onClick={() => setOpen(false)} className="block text-lightblue hover:text-maroon">
+                    <a href="#contact" onClick={() => setOpen(false)} className="block text-lightblue hover:text-salmon">
                         Contact
                     </a>
 
@@ -123,7 +124,7 @@ export default function Navbar() {
                     >
                         <span
                         className="inline-flex items-center gap-2 bg-gradient-to-r from-seaglass to-almond 
-                                    text-forestgreen hover:text-maroon px-4 py-2 rounded-full"
+                                    text-forestgreen hover:text-salmon px-4 py-2 rounded-full"
                         >
                         <FaLinkedin className="text-xl" />
                         Connect with Me

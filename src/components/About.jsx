@@ -6,7 +6,11 @@ const About = () => {
     <section id="about" className='scroll-mt-5 md:scroll-mt-5'>
         <div className='bg-forestgreen text-lightblue py-20'>
             <div className='container mx-auto px-8 md:px-16 lg:px-24'>
-                <h2 className='text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-sage to-seaglass'>A Bit More About Me!</h2>
+                <h2 className='text-4xl font-bold text-center mb-12 
+                    text-almond'
+                >
+                    A Bit More About Me!
+                </h2>
                 <div className='flex flex-col md:flex-row items-center md:space-x-12'>
                     <img src={AboutImage} alt='About Me Image'
                     className='w-100 h-120 rounded object-cover mb-8 md:mb-0'/>
