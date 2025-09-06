@@ -10,7 +10,7 @@ const Hero = () => {
             <h1 className='text-4xl font-bold px-8'>
                 Hi! I'm {" "}
                 <span className='text-transparent bg-clip-text bg-gradient-to-r from-sage to-seaglass'>Anna Yan</span>
-                , Aspiring Software Engineer
+                , Aspiring Tech Analyst and Software Engineer
             </h1>
             <p className='mt-6 text-lg text-lightblue px-8'>
                 I'm a passionate computer science student at the University of Chicago, with a strong interest in analytical problem solving and innovative tech solutions.
