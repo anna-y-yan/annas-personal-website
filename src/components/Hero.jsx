@@ -18,7 +18,7 @@ const Hero = () => {
             <div className='mt-6 space-x-10'>
                 <a href="#contact">
                     <button
-                    className='bg-gradient-to-r from-seaglass to-almond text-matcha hover:text-salmon
+                    className='bg-gradient-to-r from-seaglass to-almond text-matcha hover:text-maroon
                     md:inline transform transition-transform duration-300 hover:scale-120 px-4 py-2 rounded-full text-lg'
                     >
                         Contact Me
@@ -26,7 +26,7 @@ const Hero = () => {
                 </a>
                 <a href="/AnnaYan_Resume_Sep25.pdf" target="_blank" rel="noopener noreferrer">
                     <button
-                        className='bg-gradient-to-r from-seaglass to-almond text-matcha hover:text-salmon
+                        className='bg-gradient-to-r from-seaglass to-almond text-matcha hover:text-maroon
                         md:inline transform transition-transform duration-300 hover:scale-120 px-4 py-2 rounded-full text-lg'
                     >
                         Resume
