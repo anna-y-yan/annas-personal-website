@@ -17,11 +17,10 @@ const About = () => {
                     <div className='flex-1'>
                         <p className='text-lg mb-8 text-lightblue'>
                             I am currently a Junior at the University of Chicago studying Computer Science and Economics,
-                            and I am eager to explore the world of technology and innovation. My journey
-                            into coding began in high school, where I discovered my love for problem-solving
-                            and creating digital solutions for real world problems. Since then, I have honed my skills in 
-                            various programming languages and frameworks, including Python, Java, and React. Outside
-                            of tech, I am a competitive hip hop dancer, an avid coffee and matcha drinker, and I enjoy hiking and traveling!
+                            and I am eager to explore the world of technology and innovation. I'm passionate about creating intuitive,
+                            accessible digital experiences that connect users and technology. 
+                            I'm experienced in cross-functional collaboration and communicating technical ideas through human-centered design.
+                            Outside of tech, I am a competitive hip hop dancer, an avid coffee and matcha drinker, and I enjoy hiking and traveling!
                         </p>
                         {/* Skills progress bars */}
                         {/* <div className='space-y-4'>
