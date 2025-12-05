@@ -7,8 +7,50 @@ import myshell from '../assets/myshell.svg'
 import smalloc from '../assets/smalloc.svg'
 import splunk from '../assets/splunk.svg'
 import webcode from '../assets/websitecode.svg'
+import pong from '../assets/pong.jpg'
+import scubainterface from '../assets/scubainterface.png'
+import hapticmenu from '../assets/hapticmenu.png'
 
 const projects = [
+    {
+        id: 8,
+        name: "VR Scuba Diving Interface",
+        technologies: "Unity, C#, VR Development, XR Interaction Toolkit",
+        description: "A virtual reality interface for scuba diving simulations. \
+        Created usable interfaces combining 3D UI elements and audio pseudo-haptics to enhance user immersion. \
+        Designed intuitive controls and interactions using scripts in C# within the Unity engine. \
+        Our interface was also robust against mud simulator conditions, ensuring usability in low-visibility environments.",
+        image: scubainterface,
+        progress: "Completed: Developed the VR interface and tested it with multiple users, \
+        was awarded the 'Hand Interfaces Award' at the VR Scuba Diver Expo.",
+        video: "https://www.youtube.com/watch?v=3x36388Lqqg"
+    },
+    {
+        id: 7,
+        name: "Haptics-Only Menu for Fitness Tracker",
+        technologies: "Python, Vibration Motors, Accessible UI, User Testing",
+        description: "A haptics-only menu system designed for a fitness tracker \
+        to assist visually impaired users in navigating through various options. \
+        The menu utilizes vibration patterns to convey information and provide feedback. \
+        Users can select options based on different vibration sequences, making it accessible without visual cues.",
+        image: hapticmenu,
+        progress: "Completed: Designed and implemented the haptics-only menu system, \
+        conducted AB testing and received positive feedback for our design from initial user studies.",
+    }, 
+    {
+        id: 9,
+        name: "Eyes-Free Hands-Free Pong",
+        technologies: "Python, OSC, Google Speech Recognition API, Google Text to Speech",
+        description: "An eyes-free, hands-free version of the classic Pong game. \
+        Players control their paddles using the pitch of their voice to move up and down. \
+        The game provides audio feedback using text-to-speech for scores and game events. \
+        Audio output uses stereo panning to enhance spatial awareness of game state. \
+        Implemented using Python with the OSC protocol for real-time audio input processing.",
+        image: pong,
+        progress: "Completed: Successfully implemented voice-controlled gameplay and \
+        received positive feedback for accessibility features.",
+        video: "https://youtu.be/OVOgnOSSYDg?si=9VX-U9Yf6WD89rty"
+    },
     {
         id: 1,
         name: "Blokus Game",
@@ -19,7 +61,7 @@ const projects = [
         Features include a graphical interface using Pygame and a text-based \
         interface using the Curses library. \ Code for this project is available upon request.",
         progress: "In Progress: Currently enhancing the AI opponent using \
-        minimax algorithm with alpha-beta pruning for improved decision-making."
+        minimax algorithm with alpha-beta pruning for improved decision-making.",
     },
     {
         id: 2,
@@ -33,7 +75,7 @@ const projects = [
         adjustments to improve detection accuracy. (Real dashboard includes \
         confidential company data and is not publicly available.)",
         progress: "Completed: Successfully deployed the dashboard and integrated \
-        with ServiceNow, resulting in a 20% reduction in false positives."
+        with ServiceNow, resulting in a 20% reduction in false positives.",
     },
     {
         id: 3,
@@ -47,17 +89,7 @@ const projects = [
         Code for this project is available upon request.",
         image: topsyturvy,
         progress: "Completed: Developed the game mechanics and user interface, \
-        achieving a fun and challenging experience for players."
-    },
-    {
-        id: 4,
-        name: "Personal Website",
-        technologies: "React, Tailwind CSS, JavaScript",
-        description: "A personal portfolio website to showcase my projects, skills, \
-        and experiences. Built using React for the frontend and styled with Tailwind CSS. \
-        The website is responsive and includes sections for about me, projects, and contact information.",
-        image: webcode,
-        progress: "Completed: Deployed the website and continuously updating it with new projects and content."
+        achieving a fun and challenging experience for players.",
     },
     {
         id: 5,
@@ -67,7 +99,7 @@ const projects = [
         Features include command execution, piping, redirection, and built-in commands like cd and exit. \
         The shell is designed to be lightweight and efficient, providing a simple interface for users to interact with the system.",
         image: myshell,
-        progress: "Completed: Successfully implemented core shell functionalities and tested on various Linux distributions."
+        progress: "Completed: Successfully implemented core shell functionalities and tested on various Linux distributions.",
     },
     {
         id: 6,
@@ -79,7 +111,17 @@ const projects = [
         It includes features like coalescing free blocks and splitting larger blocks for efficient allocation.",
         image: smalloc,
         progress: "Completed: Developed and tested the memory allocator, achieving \
-        performance comparable to standard library implementations."
+        performance comparable to standard library implementations.",
+    },
+    {
+        id: 4,
+        name: "Personal Website",
+        technologies: "React, Tailwind CSS, JavaScript",
+        description: "A personal portfolio website to showcase my projects, skills, \
+        and experiences. Built using React for the frontend and styled with Tailwind CSS. \
+        The website is responsive and includes sections for about me, projects, and contact information.",
+        image: webcode,
+        progress: "Completed: Deployed the website and continuously updating it with new projects and content.",
     },
 ]
 
@@ -91,7 +133,7 @@ const toTechList = (technologies) =>
             .map(t => t.trim())
             .filter(Boolean);
 
-function ReadMoreModal({ open, onClose, description, name, technologies, image, progress }) {
+function ReadMoreModal({ open, onClose, description, name, technologies, image, progress, video }) {
     useEffect(() => {
         if (!open) return;
         const onKey = (e) => e.key === 'Escape' && onClose();
@@ -163,6 +205,18 @@ function ReadMoreModal({ open, onClose, description, name, technologies, image, 
                     <div>
                         <p className='text-matcha text-sm italic mb-2'>{progress}</p>
                     </div>
+                    {video && (
+                        <div className="mt-4">
+                            <a
+                                href={video}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-maroon hover:text-chocolate underline text-sm"
+                            >
+                                Watch a demo video here
+                            </a>
+                        </div>
+                    )}
 
                 </div>
             </div>
@@ -208,6 +262,7 @@ const Projects = () => {
                     technologies={selectedProject ? selectedProject.technologies : ''}
                     image={selectedProject ? selectedProject.image : ''}
                     progress={selectedProject ? selectedProject.progress : ''}
+                    video={selectedProject ? selectedProject.video : ''}
                 />
             </div>
             </div>
