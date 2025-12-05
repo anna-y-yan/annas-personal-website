@@ -58,7 +58,7 @@ const Footer = () => {
                 </div>
                 <div className='flex space-x-4'>
                     <p className='text-matcha italic'>
-                        This page was last updated September 2025.
+                        This page was last updated December 2025.
                     </p>
                 </div>
             </div>

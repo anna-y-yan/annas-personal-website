@@ -18,8 +18,8 @@ const About = () => {
                         <p className='text-lg mb-8 text-lightblue'>
                             I am currently a Junior at the University of Chicago studying Computer Science and Economics,
                             and I am eager to explore the world of technology and innovation. I'm passionate about creating intuitive,
-                            accessible digital experiences that connect users and technology. 
-                            I'm experienced in cross-functional collaboration, communicating technical ideas to non-technical audiences, and creating human-centered design.
+                            accessible digital experiences that connect users and technology. I also have a keen interest in applying scientific and mathematical rigor to find patterns in messy data.
+                            I'm experienced in working with datasets, communicating technical ideas to non-technical audiences, and creating human-centered design.
                             Outside of tech, I am a competitive hip hop dancer, an avid coffee and matcha drinker, and I enjoy hiking and traveling!
                         </p>
                         {/* Skills progress bars */}
